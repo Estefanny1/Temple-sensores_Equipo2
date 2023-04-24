@@ -20,7 +20,8 @@ Realización de proyecto con sensores.
 - Estradra Dominguez Sergio
 - Gutierrez Martinez Juan Andres 
 - Virgen Pulido Jose Angel
-- Garcia Araceli
+- Garcia Armijo Araceli Elizabeth 
+- Hernandez Aguiar Juan Carlos
 - ...
 
 ## Repositorio:  Temple-sensores Equipo2
