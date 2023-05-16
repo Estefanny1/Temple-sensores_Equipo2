@@ -38,7 +38,7 @@ Realización de proyecto con sensores.
 ## Complete:  (Ya terminado), borrar estos mensajes.
 ```
 --------------------------------------------------------------------------------
-## SENSORES  KY-038 Small Sound Y KY-034 7 COLOR FLASH
+# SENSORES  KY-038 Small Sound Y KY-034 7 COLOR FLASH
 Se combinaron dos sensores para que cuando el sensor small sound detectara sonido el sensor color flash prendiera en todos sus colores 
 este es el codigo que se utilizo para esta practica.
 ## CODIGO
@@ -65,11 +65,32 @@ while True:
     # Retardo para evitar lecturas rápidas y estables
     utime.sleep(0.1)
    ```
- 
-# PRUEBAS
+## PRUEBA
 SENSORES  KY-038 Small Sound Y KY-034 7 COLOR FLASH
 ![images](https://github.com/elizabethAEGA2/elizabeth/blob/main/GITHUB/Captura%20de%20pantalla%202023-05-15%20181105.png)
 
+# SENSOR KY-032 Avoidance
+Este sensor enciende o apaga un LED en función de si se detecta un obstáculo o no. 
+## CODIGO
+```python
+import machine
+
+led_pin = machine.Pin(13, machine.Pin.OUT)      # LED pin on Raspberry Pi Pico
+detector_pin = machine.Pin(3, machine.Pin.IN)   # obstacle avoidance sensor interface
+
+while True:
+    val = detector_pin.value()  # Read value from sensor
+    if val == 0:  # When the sensor detects an obstacle, the LED on Raspberry Pi Pico lights up
+        led_pin.on()
+    else:
+        led_pin.off()
+```
+## PRUEBA
+SENSOR KY-032 Avoidance
+
+![images](https://github.com/elizabethAEGA2/elizabeth/blob/main/GITHUB/IMG_7569.jpg)
+
+# PRUEBA 
 ![](https://www.snapon.co.za/images/thumbs/default-image_550.png)
 
 ![](https://www.snapon.co.za/images/thumbs/default-image_550.png)
