@@ -67,6 +67,7 @@ while True:
    ```
  
 # PRUEBAS
+SENSORES  KY-038 Small Sound Y KY-034 7 COLOR FLASH
 ![images](https://github.com/elizabethAEGA2/elizabeth/blob/main/GITHUB/Captura%20de%20pantalla%202023-05-15%20181105.png)
 
 ![](https://www.snapon.co.za/images/thumbs/default-image_550.png)
