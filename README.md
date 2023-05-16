@@ -157,7 +157,7 @@ while True:
  # PRUEBA 
 ![images](https://github.com/tectijuana/git-fundamentos-JoseAPulido/blob/main/imagenes/20230508_145314.jpg)
 
-![](https://www.snapon.co.za/images/thumbs/default-image_550.png)
+![images](https://github.com/tectijuana/git-fundamentos-JoseAPulido/blob/main/imagenes/20230508_145307.jpg)
 
 
 # CONCLUSIONES
