@@ -120,6 +120,7 @@ while True:
 ## PRUEBA 
  # SENSOR KY-015
  ## CODIGO  
+```
  import dht12
 import machine
 import time
@@ -149,7 +150,7 @@ while True:
     
     time.sleep(2) # Espera 2 segundos antes de la próxima lectura
 
- 
+ ```
  
  
 
