@@ -281,7 +281,18 @@ while True:
     sleep(1) # set a delay between readings
     oled.show()
  ```
- # PRUEBA 7
+ ## PRUEBA 7
+  # SENSOR  KY-029
+ ![348358169_206814208836019_8304376646058096095_n](https://github.com/Estefanny1/Temple-sensores_Equipo2/assets/71289132/073d68bd-b066-4e97-84a2-622b6f705a71)
+```Python
+from machine import  Pin,
+
+
+led = Pin(25, Pin.OUT)
+led.value(1)
+```
+ 
+ # PRUEBA 8
 ![images](https://github.com/tectijuana/git-fundamentos-JoseAPulido/blob/main/imagenes/20230508_145314.jpg)
 
 ![images](https://github.com/tectijuana/git-fundamentos-JoseAPulido/blob/main/imagenes/20230508_145307.jpg)
