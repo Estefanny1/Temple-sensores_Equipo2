@@ -246,8 +246,42 @@ while True:
     print("X: " + xStatus + ", Y: " + yStatus + "  button status: " + buttonStatus)
     utime.sleep(0.2)
  ```
+ ## PRUEBA 6
+ Mostrar en pantalla oled la intencidad de luz que resive la fotoresistensia
+ # SENSOR Photoresistor module KY-018
+ ![348357057_243998028309667_1399446362090185094_n (1)](https://github.com/Estefanny1/Temple-sensores_Equipo2/assets/71289132/6f790ac9-e42a-4c95-8442-dae7b309f8c4)
 
- # PRUEBA 6
+  ## CODIGO
+ ```python
+from machine import ADC, Pin, I2C
+from time import sleep
+
+from machine import Pin, I2C
+from ssd1306 import SSD1306_I2C
+
+ANCHO = 128
+ALTO = 64
+i2c = I2C(1,scl = Pin(19), sda = Pin(18))
+oled = SSD1306_I2C(ANCHO, ALTO, i2c)
+
+photoPIN = 26
+
+def readLight(photoGP):
+    photoRes = ADC(Pin(26))
+    
+    light = photoRes.read_u16()
+    
+    light = round(light/65535*100,2)
+    return light
+
+while True:
+    oled.fill(0)
+    
+    oled.text("light: " + str(readLight(photoPIN)) +"%",0,30)
+    sleep(1) # set a delay between readings
+    oled.show()
+ ```
+ # PRUEBA 7
 ![images](https://github.com/tectijuana/git-fundamentos-JoseAPulido/blob/main/imagenes/20230508_145314.jpg)
 
 ![images](https://github.com/tectijuana/git-fundamentos-JoseAPulido/blob/main/imagenes/20230508_145307.jpg)
