@@ -449,5 +449,114 @@ while True:
 SENSORES  ky-005 ir emission
 ![images](https://github.com/elizabethAEGA2/elizabeth/blob/main/GITHUB/348366292_780297140471972_674763039964703554_n.jpg)
 ![images](https://github.com/elizabethAEGA2/elizabeth/blob/main/GITHUB/348857920_202336795963427_5231867576821245411_n.jpg)
+
+## PRUEBA 11 
+
+
+# Sensor KY-012 buzzer y KY-027 2pcs light cup
+El sensor Ky-027 funciona con movimiento de inclinación si el sensor se inclina y el mercurio deja de tener conexión con el circuito enciende el led como en la imagen, para este le agregamos un buzzer para que hiciera sonido si se activaba el sensor de inclinación.
+
+# Código
+
+```python
+from machine import Pin
+import utime
+led = Pin('LED', Pin.OUT) 
+buzzer = Pin(0, Pin.OUT) #salida para el sensor KY-012 Buzzer
+detect = machine.Pin(27, machine.Pin.IN)#Salida para el pin de inclinacion ky-027 2pcs light cup
+led1 = machine.Pin(1, machine.Pin.OUT)#salida para el led 
+while True:
+    detect_value = detect.value()
+    buzzer.value(detect_value)
+    led1.value(detect_value)
+    buzzer.value(detect_value)
+    utime.sleep(1)
+  
+```
+## PRUEBA 12
+
+# Sensor KY-026 Flame y KY-012 buzzer
+El sensor KY-026 lo utilizamos para detectar flamas y activa el buzzer conectado para hacer la simulacion de alarma contra incendio o para detectar fuego.
+En la prueba lo activamos con un encendedor.
+
+# Codigo
+
+```python
+from machine import Pin
+import utime
+buzzer = Pin(0, Pin.OUT) #salida para el sensor KY-012 Buzzer
+flame_sensor = Pin(16, Pin.IN)#salida para el sensor KY-026flame
+utime.sleep(2)
+while True:
+   if flame_sensor.value() == 1:
+       print("Flame Detected")
+       buzzer.value(2)
+       utime.sleep(3)
+   else:
+       print("No Flame")
+       buzzer.off()
+       utime.sleep(1)  
+utime.sleep(0.1)
+```
+## PRUEBA 13
+
+# sensor KY-002 shock
+El sensor KY-002 funciona con una resistencia de movimiento, al ser movido el objeto o el sensor detecta una vibraciones e indica que el sensor tuvo movimiento.
+La prueba se realizo activando un led cada que tuviera movimiento el sensor.
+
+# Codigo
+
+```python
+import machine
+import utime
+
+SENSOR_PIN = 27
+LED_PIN = 0
+
+sensor = machine.Pin(SENSOR_PIN, machine.Pin.IN, machine.Pin.PULL_UP)
+led = machine.Pin(LED_PIN, machine.Pin.OUT)
+
+while True:
+    estado = sensor.value()
+    if estado == 0:
+        led.value(1)
+        print("Movimiento detectado")
+        utime.sleep(2)
+    else:
+        led.value(0)
+```
+
+## PRUEBA 14 
+# Sensor KY-001 18B20 TEMP
+El sensor de temperatura KY-001 se programo para recibir la temperatura actual y su conexion, solo se ocupan las librerias para detectar la temperatura.
+
+# Codigo
+```python
+import machine
+import onewire
+import ds18x20
+# Declaración del pin de entrada que está conectado con el módulo del sensor
+KY001_Signal_PIN = 4
+# Configuración de las bibliotecas
+oneWire = onewire.OneWire(machine.Pin(KY001_Signal_PIN)) # Crear un objeto OneWire utilizando el pin de entrada
+sensors = ds18x20.DS18X20(oneWire) # Crear un objeto DS18X20 utilizando el objeto OneWire
+# Inicialización de la salida serial
+uart = machine.UART(0, 9600)
+print("KY-001 medición de temperatura")
+# Inicialización del sensor
+roms = sensors.scan() # Escanear los dispositivos conectados al bus OneWire
+sensors.convert_temp() # Iniciar la conversión de temperatura en el sensor
+# Bucle principal del programa
+while True:
+    # Iniciar la medición de temperatura...
+    sensors.convert_temp()
+    machine.delay(750)
+    # ... y mostrar la temperatura medida
+    for rom in roms:
+        temp = sensors.read_temp(rom)
+        print("Temperatura: ", temp, "C")
+    machine.delay(1000) # Esperar 1 segundo antes de la siguiente medición
+```
+
 # CONCLUSIONES
 _esta es conclusión_
