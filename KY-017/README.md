@@ -21,3 +21,6 @@ while True:
     time.sleep(0.1)
 
  ```
+ 
+![20230523_145427](https://github.com/Estefanny1/Temple-sensores_Equipo2/assets/124211869/71e774a1-7d5b-416a-b718-0b2cabe87211)
+![sensor](https://github.com/Estefanny1/Temple-sensores_Equipo2/assets/124211869/73d9d3be-fb4b-4285-82c9-06ce5431bf6a)
