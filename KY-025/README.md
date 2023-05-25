@@ -1,5 +1,5 @@
 
- # SENSOR KY-017
+ # SENSOR KY-025
  ## CODIGO  
 
 ```Python
@@ -21,3 +21,4 @@ while True:
  
  
 ![sen25](https://github.com/Estefanny1/Temple-sensores_Equipo2/assets/124211869/dda95bac-bd62-4bd0-a00d-9011e7ccb64f)
+![Captura de pantalla 2023-05-24 215647](https://github.com/Estefanny1/Temple-sensores_Equipo2/assets/124211869/56738af3-684e-4210-b1fe-11f353246de3)
