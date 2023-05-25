@@ -290,10 +290,6 @@ def playsong(mysong):
     bequiet()
 playsong(song)
  ```
- # PRUEBA 9
-![images](https://github.com/tectijuana/git-fundamentos-JoseAPulido/blob/main/imagenes/20230508_145314.jpg)
-
-![images](https://github.com/tectijuana/git-fundamentos-JoseAPulido/blob/main/imagenes/20230508_145307.jpg)
 
 # SENSORES  ky-005 ir emission
 Tiene como objetivo controlar el sensor KY-005 de emisión infrarroja utilizando una Raspberry Pi Pico. Es un codigo 
