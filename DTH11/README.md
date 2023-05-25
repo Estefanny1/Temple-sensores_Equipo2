@@ -4,16 +4,16 @@ import machine
 import ssd1306
 import time
 
-# Configura el pin del sensor DHT11
+ Configura el pin del sensor DHT11
 pin_dht = machine.Pin(16)  # Cambia el número de pin según corresponda
 
-# Configura la pantalla SSD1306
+ Configura la pantalla SSD1306
 sda_pin = machine.Pin(4)  # Cambia el número de pin SDA según corresponda
 scl_pin = machine.Pin(5)  # Cambia el número de pin SCL según corresponda
 i2c = machine.I2C(-1, sda=sda_pin, scl=scl_pin)
 display = ssd1306.SSD1306_I2C(128, 64, i2c)
 
-# Crea una instancia del sensor DHT11
+ Crea una instancia del sensor DHT11
 sensor = dht.DHT11(pin_dht)
 
 while True:
