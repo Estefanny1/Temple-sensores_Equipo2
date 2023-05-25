@@ -3,6 +3,7 @@
 # Sensor RP2040
 
 Codigo:
+```python
 import machine
 
 # Configura el pin del botón
