@@ -22,7 +22,7 @@ Realización de proyecto con sensores.
 - Virgen Pulido Jose Angel
 - Garcia Armijo Araceli Elizabeth 
 - Hernandez Aguiar Juan Carlos
-- ...
+
 
 ## Repositorio:  Temple-sensores Equipo2
 ## Fecha de revisión:   25/05/2023
