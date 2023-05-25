@@ -3,42 +3,21 @@
  ## CODIGO  
 
 ```Python
+from machine import Pin
 import time
-import board
-import busio
-import adafruit_ads1x15.ads1115 as ADS
-from adafruit_ads1x15.analog_in import AnalogIn
-import RPi.GPIO as GPIO
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
 
-i2c = busio.I2C(board.SCL, board.SDA)
-
-ads = ADS.ADS1115(i2c)
-
-chan0 = AnalogIn(ads, ADS.P0)
-chan1 = AnalogIn(ads, ADS.P1)
-chan2 = AnalogIn(ads, ADS.P2)
-chan3 = AnalogIn(ads, ADS.P3)
-
-delayTime = 1
-Digital_PIN = 24
-
-GPIO.setup(Digital_PIN, GPIO.IN, pull_up_down = GPIO.PUD_OFF)
-
+ReedSensor = Pin(18, Pin.IN)
 while True:
-    analog = '%.2f' % chan0.voltage
- 
-    
-    if GPIO.input(Digital_PIN) == False:
-        print ("Analog voltage value:", analog, "V, ", "Limit: not yet reached")
+    value = ReedSensor.value()
+    print(value, end = " ")
+    if value == 0:
+        print("A magnetic field")
     else:
-        print ("Analog voltage value:", analog, "V, ", "Limit: reached")
-    print ("---------------------------------------")
-
-    button_pressed = False
-    time.sleep(delayTime)
+        print("There is no magnetic field")
+    time.sleep(0.1)
 
  ```
  
  
+ 
+![sen25](https://github.com/Estefanny1/Temple-sensores_Equipo2/assets/124211869/dda95bac-bd62-4bd0-a00d-9011e7ccb64f)
