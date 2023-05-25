@@ -1,6 +1,6 @@
  # SENSOR KY-017
  ## CODIGO  
-```
+```Python
 # Valores de referencia
 valor_horizontal = 0
 valor_vertical = 1
