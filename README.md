@@ -30,10 +30,11 @@ Realización de proyecto con sensores.
 ##   
 
 ## TODO: (pendientes sin resolver)
-##
+## Alex DUran unirse al repositorio y editar.
+## Poner los Sensores en carpetas
 ##
 ## In Progress: (resueltos parcialmente)
-##
+## 
 ##
 ## Complete:  (Ya terminado), borrar estos mensajes.
 ```
